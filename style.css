@@ -1,6 +1,6 @@
-/* ==========================================
-   GOOGLE FONT
-========================================== */
+/* ==========================
+   RESET
+========================== */
 
 *{
     margin:0;
@@ -9,30 +9,13 @@
     scroll-behavior:smooth;
 }
 
-:root{
-
-    --primary:#1E3A5F;
-    --secondary:#2563EB;
-    --background:#F8FAFC;
-    --card:#FFFFFF;
-    --text:#1F2937;
-    --subtext:#6B7280;
-    --border:#E5E7EB;
-
-}
-
 body{
 
-    font-family:'Inter',sans-serif;
-    background:var(--background);
-    color:var(--text);
-    line-height:1.7;
+    font-family:'Poppins',sans-serif;
+    background:#f8fafc;
+    color:#1f2937;
 
 }
-
-/* ==========================================
-   COMMON
-========================================== */
 
 .container{
 
@@ -44,655 +27,517 @@ body{
 
 section{
 
-    padding:90px 0;
+    padding:80px 0;
 
 }
 
-.section-title{
-
-    font-size:34px;
-    font-weight:700;
-    margin-bottom:45px;
-    color:var(--primary);
-
-}
-
-/* ==========================================
+/* ==========================
    NAVBAR
-========================================== */
+========================== */
 
-.navbar{
+nav{
 
     position:fixed;
-
     top:0;
-
     width:100%;
-
-    background:rgba(255,255,255,.95);
-
-    backdrop-filter:blur(12px);
-
-    border-bottom:1px solid var(--border);
-
-    z-index:999;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    z-index:1000;
 
 }
 
 .nav-container{
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     height:75px;
 
 }
 
 .logo{
 
-    text-decoration:none;
-
-    color:var(--primary);
-
+    color:#2563eb;
     font-size:28px;
-
-    font-weight:800;
-
-    cursor:pointer;
-
-    transition:.3s;
+    font-weight:700;
 
 }
 
-.logo:hover{
-
-    color:var(--secondary);
-
-}
-
-.nav-links{
+nav ul{
 
     display:flex;
-
-    gap:40px;
-
+    gap:30px;
     list-style:none;
 
 }
 
-.nav-links a{
+nav a{
 
     text-decoration:none;
-
-    color:var(--text);
-
-    font-weight:600;
-
-    position:relative;
-
-    transition:.3s;
-
-    cursor:pointer;
-
-}
-
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:2px;
-
-    background:var(--secondary);
-
+    color:#1f2937;
+    font-weight:500;
     transition:.3s;
 
 }
 
-.nav-links a:hover{
+nav a:hover{
 
-    color:var(--secondary);
-
-}
-
-.nav-links a:hover::after{
-
-    width:100%;
+    color:#2563eb;
 
 }
 
-/* ==========================================
+/* ==========================
    HERO
-========================================== */
+========================== */
 
 .hero{
 
     min-height:100vh;
-
     display:flex;
-
     align-items:center;
-
-    margin-top:50px;
+    margin-top:70px;
 
 }
 
 .hero-content{
 
     display:flex;
-
+    justify-content:space-between;
     align-items:center;
+    gap:60px;
+
+}
+
+.hero-left{
+
+    flex:1;
+
+}
+
+.hero-left h1{
+
+    font-size:60px;
+    color:#1e3a8a;
+    margin:15px 0;
+
+}
+
+.hero-left h2{
+
+    color:#2563eb;
+    margin-bottom:20px;
+
+}
+
+.hello{
+
+    font-size:20px;
+    color:#6b7280;
 
 }
 
 .hero-text{
 
-    width:750px;
+    color:#6b7280;
+    line-height:1.8;
+    margin-bottom:35px;
 
 }
-
-.intro{
-
-    color:var(--secondary);
-
-    font-size:18px;
-
-    font-weight:600;
-
-}
-
-.hero h1{
-
-    font-size:62px;
-
-    margin:10px 0;
-
-    color:var(--primary);
-
-}
-
-.hero h2{
-
-    font-size:30px;
-
-    color:#374151;
-
-    margin-bottom:30px;
-
-}
-
-.summary{
-
-    max-width:700px;
-
-    color:var(--subtext);
-
-    font-size:18px;
-
-    margin-bottom:40px;
-
-}
-
-/* ==========================================
-   BUTTONS
-========================================== */
 
 .hero-buttons{
 
     display:flex;
-
     gap:20px;
 
 }
 
 .btn{
 
-    padding:14px 30px;
-
-    border-radius:10px;
-
+    padding:14px 28px;
+    border-radius:8px;
     text-decoration:none;
-
     font-weight:600;
-
     transition:.3s;
 
 }
 
 .primary{
 
-    background:var(--secondary);
-
+    background:#2563eb;
     color:white;
 
 }
 
 .primary:hover{
 
-    transform:translateY(-4px);
-
-    box-shadow:0 12px 25px rgba(37,99,235,.25);
+    background:#1e40af;
 
 }
 
 .secondary{
 
-    border:2px solid var(--secondary);
-
-    color:var(--secondary);
+    border:2px solid #2563eb;
+    color:#2563eb;
 
 }
 
 .secondary:hover{
 
-    background:var(--secondary);
-
+    background:#2563eb;
     color:white;
 
 }
 
-/* ==========================================
-   ABOUT
-========================================== */
+/* ==========================
+   AVATAR
+========================== */
 
-.about{
+.hero-right{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.avatar{
+
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:70px;
+    font-weight:700;
+    box-shadow:0 15px 35px rgba(37,99,235,.3);
+
+}
+/* ==========================
+   ABOUT
+========================== */
+
+#about{
+
+    background:#ffffff;
+
+}
+
+#about h2,
+#skills h2,
+#experience h2,
+#education h2,
+#contact h2{
+
+    font-size:36px;
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:40px;
+
+}
+
+#about p{
+
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.9;
+    color:#6b7280;
+    font-size:17px;
+
+}
+
+/* ==========================
+   SKILLS
+========================== */
+
+#skills{
+
+    background:#f8fafc;
+
+}
+
+.skills{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+
+}
+
+.skills div{
+
+    background:white;
+    padding:14px 28px;
+    border-radius:40px;
+    font-weight:600;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.3s;
+    cursor:pointer;
+
+}
+
+.skills div:hover{
+
+    background:#2563eb;
+    color:white;
+    transform:translateY(-5px);
+
+}
+
+/* ==========================
+   EXPERIENCE
+========================== */
+
+#experience{
 
     background:white;
 
 }
 
-.about-text{
-
-    width:850px;
-
-    color:var(--subtext);
-
-    font-size:18px;
-
-    line-height:2;
-/* ==========================================
-   SKILLS
-========================================== */
-
-.skills{
-    background:#fff;
-}
-
-.skills-grid{
-    display:flex;
-    flex-wrap:wrap;
-    gap:18px;
-    margin-top:30px;
-}
-
-.skill{
-    background:#fff;
-    border:1px solid var(--border);
-    padding:12px 22px;
-    border-radius:30px;
-    font-weight:600;
-    color:var(--text);
-    transition:.3s ease;
-    cursor:default;
-}
-
-.skill:hover{
-    background:var(--secondary);
-    color:#fff;
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(37,99,235,.25);
-}
-
-/* ==========================================
-   EXPERIENCE
-========================================== */
-
-#experience{
-    background:var(--background);
-}
-
-.experience-card{
+.card{
 
     background:#fff;
-
-    border-radius:18px;
-
-    padding:35px;
-
-    margin-top:35px;
-
-    border-left:6px solid var(--secondary);
-
-    box-shadow:0 5px 18px rgba(0,0,0,.06);
-
-    transition:.35s;
+    border-left:5px solid #2563eb;
+    padding:30px;
+    margin-bottom:30px;
+    border-radius:12px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
 
 }
 
-.experience-card:hover{
+.card:hover{
 
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    transform:translateY(-6px);
 
 }
 
-.experience-header{
+.card h3{
 
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-bottom:15px;
-
-}
-
-.experience-header h3{
-
-    color:var(--primary);
-
-    font-size:28px;
-
-}
-
-.duration{
-
-    color:var(--secondary);
-
-    font-weight:700;
-
-}
-
-.experience-card h4{
-
+    color:#1e3a8a;
     margin-bottom:8px;
 
-    font-size:21px;
+}
+
+.card span{
+
+    color:#2563eb;
+    font-weight:600;
 
 }
 
-.location{
+.card h4{
 
-    color:var(--subtext);
-
-    margin-bottom:20px;
+    margin:15px 0;
 
 }
 
-.experience-card ul{
+.card p{
 
-    padding-left:20px;
-
-}
-
-.experience-card li{
-
-    margin-bottom:12px;
-
-    color:var(--subtext);
+    margin-bottom:10px;
+    color:#6b7280;
 
 }
 
-/* ==========================================
+/* ==========================
    EDUCATION
-========================================== */
+========================== */
 
 #education{
-    background:#fff;
+
+    background:#f8fafc;
+
 }
 
-.education-grid{
+.education-container{
 
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:30px;
 
 }
 
-.education-card{
+.edu-card{
 
-    background:#fff;
-
+    background:white;
     padding:35px;
-
-    border-radius:18px;
-
-    border:1px solid var(--border);
-
     text-align:center;
-
-    transition:.35s;
+    border-radius:12px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
 
 }
 
-.education-card:hover{
+.edu-card:hover{
 
     transform:translateY(-8px);
 
-    border-color:var(--secondary);
+}
 
-    box-shadow:0 20px 40px rgba(0,0,0,.1);
+.edu-card h3{
+
+    color:#1e3a8a;
+    margin-bottom:15px;
 
 }
 
-.education-card h3{
-
-    color:var(--primary);
-
-    margin-bottom:18px;
-
-}
-
-.education-card p{
+.edu-card h4{
 
     margin-bottom:12px;
 
-    color:var(--subtext);
+}
+
+.edu-card p{
+
+    color:#6b7280;
+    margin-bottom:10px;
 
 }
 
-.college{
+.edu-card span{
 
+    color:#2563eb;
     font-weight:600;
 
-    color:var(--text)!important;
-
 }
 
-/* ==========================================
+/* ==========================
    CONTACT
-========================================== */
+========================== */
 
 #contact{
 
-    background:var(--background);
+    background:white;
+
+}
+
+.contact-text{
 
     text-align:center;
+    color:#6b7280;
+    max-width:700px;
+    margin:0 auto 40px;
 
 }
 
-.contact-description{
+.contact-grid{
 
-    width:700px;
-
-    margin:auto;
-
-    color:var(--subtext);
-
-    margin-bottom:50px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 
 }
 
-.contact-container{
+.contact-card{
 
-    display:flex;
-
-    justify-content:center;
-
-    gap:35px;
-
-    flex-wrap:wrap;
+    background:#f8fafc;
+    padding:35px;
+    text-align:center;
+    border-radius:12px;
+    transition:.3s;
 
 }
 
-.contact-item{
+.contact-card:hover{
 
-    width:280px;
-
-    background:#fff;
-
-    padding:28px;
-
-    border-radius:16px;
-
-    border:1px solid var(--border);
-
-    transition:.35s;
+    background:#2563eb;
+    color:white;
 
 }
 
-.contact-item:hover{
+.contact-card:hover p,
+.contact-card:hover h3,
+.contact-card:hover i{
 
-    transform:translateY(-8px);
-
-    border-color:var(--secondary);
-
-    box-shadow:0 18px 35px rgba(37,99,235,.18);
+    color:white;
 
 }
 
-.contact-item i{
+.contact-card i{
 
-    font-size:28px;
-
-    color:var(--secondary);
-
-    margin-bottom:18px;
-
-    display:block;
+    font-size:35px;
+    color:#2563eb;
+    margin-bottom:15px;
 
 }
 
-.contact-item span{
+.contact-card p{
 
-    color:var(--text);
-
-    font-weight:600;
+    color:#6b7280;
 
 }
 
-/* ==========================================
+/* ==========================
    FOOTER
-========================================== */
+========================== */
 
 footer{
 
-    background:var(--primary);
-
-    color:#fff;
-
+    background:#1e3a8a;
+    color:white;
     text-align:center;
-
-    padding:30px 0;
-
-}
-
-footer p{
-
-    margin:6px 0;
+    padding:50px 20px;
 
 }
 
-/* ==========================================
-   SCROLL TO TOP
-========================================== */
+.footer-icons{
+
+    margin:25px 0;
+
+}
+
+.footer-icons a{
+
+    color:white;
+    font-size:24px;
+    margin:0 15px;
+    transition:.3s;
+
+}
+
+.footer-icons a:hover{
+
+    color:#93c5fd;
+
+}
+
+footer hr{
+
+    margin:25px auto;
+    width:70%;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.2);
+
+}
+
+/* ==========================
+   TOP BUTTON
+========================== */
 
 #topBtn{
 
     position:fixed;
-
-    bottom:35px;
-
-    right:35px;
-
-    width:52px;
-
-    height:52px;
-
+    bottom:25px;
+    right:25px;
+    width:50px;
+    height:50px;
     border:none;
-
     border-radius:50%;
-
-    background:var(--secondary);
-
-    color:#fff;
-
+    background:#2563eb;
+    color:white;
     cursor:pointer;
-
     display:none;
-
-    transition:.3s;
-
-    box-shadow:0 10px 25px rgba(37,99,235,.25);
+    font-size:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
 
 }
 
 #topBtn:hover{
 
-    transform:translateY(-5px);
-
-    background:var(--primary);
-
-}
-
-/* ==========================================
-   SIMPLE FADE ANIMATION
-========================================== */
-
-.hero,
-.about,
-.skills,
-#experience,
-#education,
-#contact{
-
-    animation:fadeUp .8s ease;
-
-}
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(30px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-  
+    background:#1e3a8a;
 
 }
