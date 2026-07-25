@@ -1,20 +1,47 @@
 // ===============================
-// Smooth Scroll for Navigation
+// Smooth Scroll
 // ===============================
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+const navLinks = document.querySelectorAll("nav a");
 
-    anchor.addEventListener("click", function(e){
+navLinks.forEach(link => {
+
+    link.addEventListener("click", function(e){
 
         e.preventDefault();
 
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
+        const target = document.querySelector(this.getAttribute("href"));
+
+        target.scrollIntoView({
 
             behavior:"smooth"
 
         });
 
     });
+
+});
+
+
+// ===============================
+// Navbar Shadow
+// ===============================
+
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 40){
+
+        navbar.style.boxShadow = "0 5px 15px rgba(0,0,0,0.12)";
+
+    }
+
+    else{
+
+        navbar.style.boxShadow = "none";
+
+    }
 
 });
 
@@ -55,35 +82,10 @@ topBtn.addEventListener("click", () => {
 
 
 // ===============================
-// Navbar Shadow
-// ===============================
-
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-
-    if(window.scrollY > 50){
-
-        navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
-
-    }
-
-    else{
-
-        navbar.style.boxShadow = "none";
-
-    }
-
-});
-
-
-// ===============================
 // Active Navigation Link
 // ===============================
 
 const sections = document.querySelectorAll("section");
-
-const navLinks = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
 
@@ -91,11 +93,9 @@ window.addEventListener("scroll", () => {
 
     sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 120;
+        const sectionTop = section.offsetTop - 100;
 
-        const sectionHeight = section.clientHeight;
-
-        if(pageYOffset >= sectionTop){
+        if(window.scrollY >= sectionTop){
 
             current = section.getAttribute("id");
 
@@ -119,52 +119,27 @@ window.addEventListener("scroll", () => {
 
 
 // ===============================
-// Fade Animation on Scroll
+// Fade In Animation
 // ===============================
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries)=>{
 
-    entries.forEach(entry => {
+    entries.forEach(entry=>{
 
         if(entry.isIntersecting){
 
-            entry.target.style.opacity = "1";
-
-            entry.target.style.transform = "translateY(0)";
+            entry.target.classList.add("show");
 
         }
 
     });
 
 },{
-
     threshold:0.2
-
 });
 
-document.querySelectorAll("section").forEach(section => {
-
-    section.style.opacity = "0";
-
-    section.style.transform = "translateY(40px)";
-
-    section.style.transition = "all 0.8s ease";
+sections.forEach(section=>{
 
     observer.observe(section);
 
 });
-
-
-// ===============================
-// Current Year in Footer
-// ===============================
-
-const year = new Date().getFullYear();
-
-const footer = document.querySelector("footer p");
-
-if(footer){
-
-    footer.innerHTML = `© ${year} Sathvik Baja`;
-
-}
